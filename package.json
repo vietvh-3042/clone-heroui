@@ -7,11 +7,20 @@
     "lint:docs": "eslint -c .eslintrc.json ./apps/docs/**/*.{ts,tsx,js,jsx}",
     "lint:fix": "eslint --fix -c .eslintrc.json ./packages/**/*.{ts,tsx}",
     "lint:docs-fix": "eslint --fix -c .eslintrc.json ./apps/docs/**/*.{ts,tsx,js,jsx}",
-    "prepare": "husky"
+    "postinstall": "husky install && pnpm --filter @heroui/theme build"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.2.0",
     "@commitlint/config-conventional": "^17.2.0",
+    "@swc/jest": "^0.2.24",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.2",
+    "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^15.12.4",
+    "@types/react": "^18.0.1",
+    "@types/react-dom": "^18.0.0",
     "commitlint-plugin-function-rules": "^1.7.1",
     "eslint": "^7.29.0",
     "eslint-config-airbnb": "^18.2.1",
@@ -19,6 +28,7 @@
     "eslint-config-prettier": "^8.2.0",
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^8.0.1",
+    "jest-watch-typeahead": "2.2.2",
     "lint-staged": "^13.0.3",
     "prettier": "^2.2.1",
     "prettier-eslint-cli": "^5.0.1"
