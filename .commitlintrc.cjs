@@ -3,6 +3,7 @@ const conventional = require("@commitlint/config-conventional");
 module.exports = {
   extends: ["@commitlint/config-conventional"],
   plugins: ["commitlint-plugin-function-rules"],
+  helpUrl: "https://github.com/vietvh-3042/clone-heroui/blob/dev/CONTRIBUTING.md#commit-convention",
   rules: {
     ...conventional.rules,
     "type-enum": [
